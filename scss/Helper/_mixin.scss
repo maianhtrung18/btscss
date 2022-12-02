@@ -1,0 +1,53 @@
+
+
+
+@mixin buttonPinkStyle($pd-x, $pd-y) {
+    background-color: $primaryPink;
+    border: 1px solid $primaryPink;
+    border-radius: 50px;
+    color: $primaryWhite;
+    padding: $pd-y $pd-x;
+    text-decoration: none;
+}
+
+@mixin buttonPinkHover {
+    background-color: transparent;
+    border: 1px solid $primaryPink;
+    color: $primaryPink;
+    
+}
+
+@mixin inputForm() {
+    padding: 5px 15px;
+    border: 1px solid $borderColor;
+    border-radius: 20px;
+    transition: all 0.5s;
+    &:focus-within{
+        border: 1px solid rgba($color: #000000, $alpha: 0.3);
+        input, textarea{
+           
+            outline: none;
+        
+      
+        }
+    }
+    input, textarea{
+        border: none;
+        font-size: 10px;
+        width: calc(100% - 25px) ;
+    }
+    
+}
+
+@mixin responsive($screen) {
+    // breakpoints là biến tạo bên kia
+    @if (map-has-key($map: $breakpoints, $key: $screen)) {
+        $value: map-get($map: $breakpoints, $key: $screen);
+        @media screen and (min-width: $value) {
+            @content;
+        }
+    }
+    @else{
+        @warn 'màn hình không tồn tại'
+    }
+}

@@ -1,0 +1,47 @@
+
+// Color
+$primaryPink: #b61984;
+$secondaryPink: #aa017e;
+$primaryWhite: #fff;
+$primaryBlack: #000000;
+$shadowColor: rgba(204, 204, 204, 0.5);
+$borderColor: rgba(0,0,0,0.1);
+$backgroundColor: #dcd1f3;
+
+
+//font size
+$fs-1: 14px;
+$fs-2: 1rem;
+$fs-3: 1.8rem;
+$fs-4: 3.15rem;
+$fs-5: 1.6rem;
+$fs-6: 2.2rem;
+$fs-7: 3.8rem;
+$fs-8: 44px;
+//Padding
+
+$pd-1: 8px;
+$pd-2: 13px;
+$pd-3: 25px;
+$pd-4: 44px;
+$pd-5: 20px;
+$pd-6: 50px;
+$pd-7: 150px;
+$pd-8: 225px;
+
+
+//Margin
+$mg-1: 25px;
+$mg-2: 30px;
+$mg-3: 70px;
+$mg-4: 60px;
+
+//break points
+$breakpoints: (
+    "extra-large": 1200px,
+    "large": 992px,
+    "medium": 768px,
+    "small": 576px,
+    "smaller" : 360px,
+    "smallest": 1px,
+);

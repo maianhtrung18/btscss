@@ -1,0 +1,518 @@
+header {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  margin: auto;
+  z-index: 100;
+  background: none;
+}
+header #headerContainer.container {
+  justify-content: space-between;
+}
+header #navbarSupportedContent {
+  align-items: center;
+}
+header #headerContainer button {
+  border: none;
+  color: #b61984;
+}
+
+.headerIconLink {
+  display: flex;
+  gap: 15px;
+  justify-items: center;
+}
+
+.headerIconLink #phoneCall {
+  min-width: 208px;
+  font-family: "Montserrat", sans-serif;
+}
+.headerIconLink #phoneCall a {
+  background-color: #b61984;
+  border: 1px solid #b61984;
+  border-radius: 50px;
+  color: #fff;
+  padding: 13px 25px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.5s;
+}
+.headerIconLink #phoneCall a:hover {
+  background-color: transparent;
+  border: 1px solid #b61984;
+  color: #b61984;
+}
+.headerIconLink a {
+  color: inherit;
+  transition: all 0.2s;
+}
+.headerIconLink a:hover {
+  color: #b61984;
+}
+
+#navbarSupportedContent ul li {
+  position: relative;
+}
+#navbarSupportedContent ul li a.nav-link {
+  transition: all 0.2s;
+}
+#navbarSupportedContent ul li a.nav-link:hover {
+  color: #b61984;
+}
+#navbarSupportedContent ul li a.nav-link::after {
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #b61984;
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  border-radius: 50%;
+  transition: all 0.5s;
+  transform: translateX(-50%) scale(0);
+}
+#navbarSupportedContent ul li .nav-link.active::after {
+  transform: translateX(-50%) scale(1);
+}
+#navbarSupportedContent .nav-item {
+  position: relative;
+  transition: all 0.2s;
+}
+#navbarSupportedContent .nav-item:hover .subMenu {
+  visibility: visible;
+  transform: scaleX(1) scaleY(1);
+  opacity: 1;
+}
+#navbarSupportedContent .nav-item:hover a::after {
+  transform: translateX(-50%) scale(1.5);
+}
+#navbarSupportedContent .nav-item .subMenu {
+  position: absolute;
+  flex-direction: column;
+  list-style: none;
+  width: 200px;
+  padding-left: 5px;
+  box-shadow: 0 0 10px 0 rgba(204, 204, 204, 0.5);
+  display: flex;
+  transition: all 0.2s;
+  padding-left: 13px;
+  padding-right: 13px;
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleX(0.9) scaleY(0.9);
+}
+#navbarSupportedContent .nav-item .subMenu a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: inherit;
+  transition: all 0.2s;
+}
+#navbarSupportedContent .nav-item .subMenu li {
+  line-height: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+#navbarSupportedContent .nav-item .subMenu li:hover a {
+  color: #b61984;
+}
+#navbarSupportedContent .nav-item .subMenu li:last-child {
+  border: none;
+}
+
+.menuHeader {
+  gap: 30px;
+  margin-right: 30px;
+}
+.menuHeader li {
+  font-weight: 600;
+  line-height: 80px;
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (min-width: 1px) {
+  #navbarSupportedContent {
+    display: none;
+  }
+  #headerContainer button {
+    display: inline-block;
+  }
+  #headerContainer img {
+    width: 48px;
+    height: 48px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #navbarSupportedContent {
+    display: flex;
+  }
+  #headerContainer button {
+    display: none;
+  }
+  #headerContainer img {
+    width: 80px;
+    height: 80px;
+  }
+}
+.carousel_container {
+  padding-top: 80px;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  margin: auto;
+  z-index: 7;
+  position: relative;
+}
+.carousel_container .carousel_containerLeft h1 {
+  font-size: 1rem;
+  color: #b61984;
+}
+.carousel_container .carousel_containerLeft span {
+  font-weight: 700;
+  line-height: 1.2;
+}
+.carousel_container .carousel_containerRight img {
+  width: 100%;
+}
+
+.carousel {
+  position: relative;
+}
+.carousel .carouselBackground img {
+  width: 100%;
+}
+.carousel .carousel_imgTop {
+  position: absolute;
+  top: 0px;
+}
+.carousel .carousel_imgBot {
+  position: absolute;
+  bottom: 0px;
+}
+
+@media screen and (min-width: 1px) {
+  .carousel_containerLeft span {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (min-width: 360px) {
+  .carousel_containerLeft span {
+    font-size: 3.15rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .carousel_containerLeft span {
+    font-size: 3.8rem;
+  }
+}
+.card {
+  background-color: #dcd1f3;
+  border: none;
+  border-radius: 0px;
+  position: relative;
+}
+.card .card_Container {
+  margin: auto;
+  position: relative;
+  z-index: 3;
+}
+.card .card_Container .card_ContainerCard {
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow: hidden;
+}
+.card .card_Container .card_ContainerCard:nth-child(1), .card .card_Container .card_ContainerCard:nth-child(5) {
+  animation-delay: 0.2s;
+}
+.card .card_Container .card_ContainerCard:nth-child(2), .card .card_Container .card_ContainerCard:nth-child(6) {
+  animation-delay: 0.4s;
+}
+.card .card_Container .card_ContainerCard:nth-child(3), .card .card_Container .card_ContainerCard:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.card .card_Container .card_ContainerCard:nth-child(4), .card .card_Container .card_ContainerCard:nth-child(8) {
+  animation-delay: 0.8s;
+}
+.card .card_Container .card_ContainerCard:hover img {
+  transform: scale(1.2);
+}
+.card .card_Container .card_ContainerCard:hover .card_ContainerCardContainer {
+  box-shadow: 0px 15px 20px 5px rgba(0, 0, 0, 0.2);
+}
+.card .card_Container .card_ContainerCard .card_ContainerCardContainer {
+  margin-bottom: 40px;
+  transition: all 0.5s;
+}
+.card .card_Container .card_ContainerCard .card_ContainerCardImg {
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card .card_Container .card_ContainerCard .card_ContainerCardImg img {
+  width: 100%;
+  transition: all 0.5s;
+}
+.card .card_Container .card_ContainerCard .card_ContainerCardContent {
+  background-color: #fff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.card .card_Container .card_ContainerCard .card_ContainerCardContent h6 {
+  color: #b61984;
+  font-size: 0.75rem;
+  padding-top: 30px;
+}
+.card .card_Container .card_ContainerCard .card_ContainerCardContent h4 {
+  font-size: 1.55rem;
+  font-weight: 600;
+}
+.card .card_Container .card_ContainerCard .card_ContainerCardContent div {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 27px;
+  font-family: "Roboto";
+  color: #242424;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.card_background img {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+
+.formInput {
+  font-family: "Montserrat", sans-serif;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
+}
+.formInput .formInputBackground {
+  position: absolute;
+  bottom: 0px;
+}
+.formInput .formInputBackground img {
+  width: 100%;
+}
+.formInput .formInputContainer {
+  position: relative;
+  z-index: 5;
+  margin: auto;
+  max-width: 992px;
+}
+.formInput .formInputContainer .formInputContainerRight .formInputContainerRightContent {
+  box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 30px;
+  margin-left: auto;
+  border-radius: 20px;
+  background-color: #fff;
+}
+.formInput .formInputContainer .formInputContainerRight .formInputContainerRightContent .row {
+  padding: 0px;
+}
+.formInput .formInputContainer .formInputContainerRight .formInputContainerRightContent button {
+  background-color: #b61984;
+  border: 1px solid #b61984;
+  border-radius: 50px;
+  color: #fff;
+  padding: 13px 50px;
+  text-decoration: none;
+  margin-top: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 80px;
+  transition: all 0.5s;
+}
+.formInput .formInputContainer .formInputContainerRight .formInputContainerRightContent button:hover {
+  background-color: transparent;
+  border: 1px solid #b61984;
+  color: #b61984;
+}
+.formInput .formInputContainer .formInputContainerRight .formInputContainerRightContent h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+}
+.formInput .formInputContainer .formInputContainerRight .formInputContainerRightContent .form {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.formInput .formInputContainer .formInputContainerRight .formInputContainerRightContent .form .inputInfo {
+  position: relative;
+  padding: 5px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  transition: all 0.5s;
+  padding: 5px 20px;
+  margin-top: 15px;
+}
+.formInput .formInputContainer .formInputContainerRight .formInputContainerRightContent .form .inputInfo:focus-within {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.formInput .formInputContainer .formInputContainerRight .formInputContainerRightContent .form .inputInfo:focus-within input, .formInput .formInputContainer .formInputContainerRight .formInputContainerRightContent .form .inputInfo:focus-within textarea {
+  outline: none;
+}
+.formInput .formInputContainer .formInputContainerRight .formInputContainerRightContent .form .inputInfo input, .formInput .formInputContainer .formInputContainerRight .formInputContainerRightContent .form .inputInfo textarea {
+  border: none;
+  font-size: 10px;
+  width: calc(100% - 25px);
+}
+.formInput .formInputContainer .formInputContainerRight .formInputContainerRightContent .form .message {
+  padding-right: 0px;
+  padding-bottom: 0px;
+}
+.formInput .formInputContainer .formInputContainerRight .formInputContainerRightContent .form .message i {
+  position: absolute;
+  top: 7px;
+}
+.formInput .formInputContainer .formInputContainerRight .formInputContainerRightContent .form .message textarea {
+  margin-left: 20px;
+}
+
+@media screen and (min-width: 1px) {
+  .formInputGen {
+    width: 100%;
+    margin: auto;
+  }
+  .formInputContainerRightContent {
+    width: 100%;
+  }
+  .formInputContainerLeft img {
+    max-width: 580px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .formInputGen {
+    width: 80%;
+    margin: auto;
+  }
+  .formInputContainerRightContent {
+    width: 80%;
+  }
+  .formInputContainerLeft img {
+    max-width: 580px;
+  }
+}
+.footer {
+  background-color: #aa017e;
+  background-image: url(../../img/footer_background.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.footer .footerContainer {
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 160px;
+}
+.footer .footerContainer .footerContainerContent:nth-child(1) {
+  animation-delay: 200ms;
+}
+.footer .footerContainer .footerContainerContent:nth-child(2) {
+  animation-delay: 400ms;
+}
+.footer .footerContainer .footerContainerContent:nth-child(3) {
+  animation-delay: 600ms;
+}
+.footer .footerContainer .footerContainerContent:nth-child(4) {
+  animation-delay: 800ms;
+}
+.footer .footerContainer .footerContainerContent .footerContainerContentCard {
+  color: #fff;
+  padding-top: 30px;
+}
+.footer .footerContainer .footerContainerContent .footerContainerContentCard ul {
+  list-style: none;
+  padding: 0;
+}
+.footer .footerContainer .footerContainerContent .footerContainerContentCard ul li {
+  padding: 10px 0px;
+}
+.footer .footerContainer .footerContainerContent .footerContainerContentCard button {
+  background-color: #b61984;
+  border: 1px solid #b61984;
+  border-radius: 50px;
+  color: #fff;
+  padding: 10px 0px;
+  text-decoration: none;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: #fff;
+  color: #aa017e;
+  border: 1px solid #fff;
+  transition: all 0.5s;
+}
+.footer .footerContainer .footerContainerContent .footerContainerContentCard button:hover {
+  background-color: #b61984;
+  color: #fff;
+}
+.footer .footerContainer .footerContainerContent .footerContainerContentCard .footerInput {
+  padding: 5px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  transition: all 0.5s;
+  border: 1px solid #b61984;
+  text-align: center;
+  height: 40px;
+}
+.footer .footerContainer .footerContainerContent .footerContainerContentCard .footerInput:focus-within {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.footer .footerContainer .footerContainerContent .footerContainerContentCard .footerInput:focus-within input, .footer .footerContainer .footerContainerContent .footerContainerContentCard .footerInput:focus-within textarea {
+  outline: none;
+}
+.footer .footerContainer .footerContainerContent .footerContainerContentCard .footerInput input, .footer .footerContainer .footerContainerContent .footerContainerContentCard .footerInput textarea {
+  border: none;
+  font-size: 10px;
+  width: calc(100% - 25px);
+}
+.footer .footerContainer .footerContainerContent .footerContainerContentCard .footerInput input {
+  text-align: center;
+  background-color: transparent;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+}
+.footer .footerContainer .footerContainerContent .footerContainerContentCard .footerInput input::placeholder {
+  color: #fff;
+}
+.footer .footerContainer .footerContainerContent .footerContainerContentCard #footerContainerContentCardIcon {
+  display: flex;
+  gap: 15px;
+}
+.footer .footerContainer .footerContainerContent .footerContainerContentCard .footerContainerContentCardContent i {
+  width: 30px;
+}
+.footer .footerContainer .footerContainerContent .footerContainerContentCard .footerContainerContentCardContent span {
+  font-size: 14px;
+  color: #fff;
+  padding-bottom: 11px;
+}
+.footer .footerContainer .footerContainerContent .footerContainerContentCard .footerContainerContentCardTitle {
+  font-size: 23px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+@media screen and (min-width: 1px) {
+  .footerContainerContent {
+    padding: 0px 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .footerContainerContent {
+    padding: 0px 40px;
+  }
+}/*# sourceMappingURL=main.css.map */

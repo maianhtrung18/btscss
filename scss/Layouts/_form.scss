@@ -1,130 +1,102 @@
-.formInput{
-    font-family: 'Montserrat', sans-serif;
+.formInput {
+    font-family: "Montserrat", sans-serif;
     padding-top: 40px;
     padding-bottom: 40px;
-    .formInputBackground{
-        img{
+    .formInputBackground {
+        img {
             width: 100%;
         }
         position: absolute;
         bottom: 0px;
     }
-    
+
     position: relative;
-    .formInputContainer{
+    .formInputContainer {
         position: relative;
         z-index: 5;
         margin: auto;
         max-width: 992px;
-        // .formInputContainerLeft{
-            
-        //     img{
-        //         width: 100%;
-        //     }
-        // }
-        .formInputContainerRight{
-            
-            // width: 90%;
-            // text-align: right;
-            .formInputContainerRightContent{
-                box-shadow: 0 30px 30px -10px rgba($color: $primaryBlack, $alpha: .2);
-                // width: 80%;
+        .formInputContainerRight {
+            .formInputContainerRightContent {
+                box-shadow: 0 30px 30px -10px rgba($color: $primaryBlack, $alpha: 0.2);
                 padding-left: 20px;
                 padding-right: 20px;
                 padding-top: 30px;
                 margin-left: auto;
                 border-radius: 20px;
                 background-color: $primaryWhite;
-                // max-width: 41.6%;
-                
-                .row{
-                    padding: 0px
+                .row {
+                    padding: 0px;
                 }
-                button{
+                button {
                     @include buttonPinkStyle($pd-6, $pd-2);
                     margin-top: 40px;
-                    font-family: 'Montserrat', sans-serif;
+                    font-family: "Montserrat", sans-serif;
                     font-size: 12px;
                     font-weight: 600;
                     margin-bottom: 80px;
                     transition: all 0.5s;
-                    &:hover{
+                    &:hover {
                         @include buttonPinkHover();
                     }
-            
                 }
-                h1{
-                    font-family: 'Montserrat', sans-serif;
+                h1 {
+                    font-family: "Montserrat", sans-serif;
                     font-size: 25px;
                     font-weight: 700;
                 }
-                .form{
+                .form {
                     padding-left: 10px;
                     padding-right: 10px;
-                    // gap: 20px;
-                    
-                    .inputInfo{
+                    .inputInfo {
                         position: relative;
                         @include inputForm();
                         padding: 5px 20px;
-          
                         margin-top: 15px;
-                        
-    
-    
                     }
-                    .message{
+                    .message {
                         padding-right: 0px;
                         padding-bottom: 0px;
-                        i{
+                        i {
                             position: absolute;
                             top: 7px;
-                            
-                        };
-                        textarea{
+                        }
+                        textarea {
                             margin-left: 20px;
-                            
                         }
                     }
                 }
             }
-
         }
     }
 }
 
-
-
-@include responsive("smallest"){
-    .formInputGen{
+@include responsive("smallest") {
+    .formInputGen {
         width: 100%;
         margin: auto;
     }
-    .formInputContainerRightContent{
+    .formInputContainerRightContent {
         width: 100%;
     }
-    .formInputContainerLeft{
-            
-        img{
+    .formInputContainerLeft {
+        img {
             max-width: 580px;
             width: 100%;
         }
     }
-    
 }
-@include responsive("large"){
-    .formInputGen{
+@include responsive("large") {
+    .formInputGen {
         width: 80%;
         margin: auto;
     }
-    .formInputContainerRightContent{
+    .formInputContainerRightContent {
         width: 80%;
     }
-    .formInputContainerLeft{
-            
-        img{
+    .formInputContainerLeft {
+        img {
             max-width: 580px;
         }
     }
 }
-

@@ -378,6 +378,9 @@
             else {
                 container.classList.remove("container-fluid");
                 container.classList.add("container");
+                document.querySelector(".content").classList.remove("contentOnSideBar");
+                document.querySelector("body").classList.remove("bodyOnSideBar");
+                document.querySelector(".sideBar").classList.remove("sideBarOnSideBar");
             }
         }
         changeClass("headerContainer");
@@ -394,10 +397,7 @@
         })
 
         let toogleClass = () => {
-            let widthBrowser = window.innerWidth;
-            console.log(widthBrowser);
             document.querySelector(".content").classList.toggle("contentOnSideBar");
-            // document.querySelector(".content").style.width = `${widthBrowser}px`;
             document.querySelector("body").classList.toggle("bodyOnSideBar");
             document.querySelector(".sideBar").classList.toggle("sideBarOnSideBar");
         }

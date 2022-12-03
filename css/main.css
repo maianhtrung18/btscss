@@ -582,14 +582,14 @@ body {
     overflow: hidden;
   }
   .contentOnSideBar {
-    margin-left: 300px;
+    margin-left: 250px;
     width: 100vmax;
   }
   .sideBarOnSideBar {
-    width: 300px;
+    width: 250px;
   }
   .sideBarContent {
-    width: 300px;
+    width: 250px;
   }
 }
 @media screen and (min-width: 992px) {

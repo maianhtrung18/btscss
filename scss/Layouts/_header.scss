@@ -160,7 +160,15 @@ header {
             padding: 0px;
         }
     }
+    .logoNoneDisplay{
+        display: inline-block;
+    }
+    .smallHeader{
+        height: 48px;
+        background-color: $primaryWhite;
+    }
 }
+
 @include responsive("extra-large") {
     #navbarSupportedContent {
         display: flex;
@@ -177,5 +185,12 @@ header {
     }
     header{
         background-color: transparent;
+    }
+    .logoNoneDisplay{
+        display: none;
+    }
+    .smallHeader{
+        height: 54px;
+        background-color: $primaryWhite;
     }
 }

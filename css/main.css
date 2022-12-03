@@ -156,6 +156,13 @@ header #headerContainer button {
   header .navbar {
     padding: 0px;
   }
+  .logoNoneDisplay {
+    display: inline-block;
+  }
+  .smallHeader {
+    height: 48px;
+    background-color: #ffffff;
+  }
 }
 @media screen and (min-width: 1200px) {
   #navbarSupportedContent {
@@ -170,6 +177,13 @@ header #headerContainer button {
   }
   header {
     background-color: transparent;
+  }
+  .logoNoneDisplay {
+    display: none;
+  }
+  .smallHeader {
+    height: 54px;
+    background-color: #ffffff;
   }
 }
 .carousel_container {
@@ -554,7 +568,7 @@ body {
   transition: all 0.5s;
   width: 0px;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0px;
   overflow: hidden;
   background-color: #ffffff;

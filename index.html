@@ -426,12 +426,15 @@
         }
         document.getElementById("onOffSideBarMenu").onclick = toogleClass;     
         window.onscroll = () => {
-            // console.log(window.scrollY)
             if(window.scrollY >= 96){
-                document.querySelector("header .navbar").style.maxHeight = "54px";
-                document.querySelector("header .navbar").style.backgroundColor = "#FFFFFF";
-                // console.log(window.scrollY)
+                document.querySelector("header .navbar").classList.add("smallHeader");
+                document.querySelector(".navbar-brand").classList.add("logoNoneDisplay");
             }
+            else if(window.scrollY < 96){
+                document.querySelector("header .navbar").classList.remove("smallHeader");
+                document.querySelector(".navbar-brand").classList.remove("logoNoneDisplay");
+            }
+ 
         }
     </script>
 </body>

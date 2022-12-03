@@ -11,9 +11,10 @@ body {
     transition: all 0.5s;
     width: 0px;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0px;
     overflow: hidden;
+    
     background-color: $primaryWhite;
     box-shadow: 0px 0px 20px 0px rgba($color: #000000, $alpha: 0.1);
 }
@@ -80,7 +81,6 @@ body {
             }
         }
     }
-    
 }
 .subMenuSideBar li:last-child{
     padding-bottom: 0px;

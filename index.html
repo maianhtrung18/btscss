@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
-<body >
+<body>
     <div class="content">
         <header>
             <nav class="navbar navbar-expand-lg">
@@ -40,6 +40,8 @@
                             data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent1"
                             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
+                            <span id="closeIcon" class="navbar-toogler-close navbarIconNoneDisplay"><i
+                                    class="fa-solid fa-xmark"></i></span>
                         </button>
                         <a class="navbar-brand" href="#"><img src="./img/crest.png" alt="" srcset=""></a>
                     </div>
@@ -331,12 +333,25 @@
             </div>
             <div class="sideBarContentMenu">
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Courses</li>
-                    <li>Blog</li>
-                    <li>Shop</li>
-                    <li>Elements</li>
+                    <li><a href="">Home</a> </li>
+                    <li id="About"><a data-bs-toggle="collapse" href="#subMenuSideBar">About
+                        <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="subMenuSideBar show" id="subMenuSideBar">
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">About Me</a></li>
+                            <li><a href="">Our Team</a></li>
+                            <li><a href="">History</a></li>
+                            <li><a href="">Testimonials</a></li>
+                            <li><a href="">Contact</a></li>
+                            <li><a href="">Coming Soon</a></li>
+                            <li><a href="">404</a></li>
+                        </ul>
+                    </li>
+                        
+                    <li><a href="">Courses</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">Elements</a></li>
                 </ul>
                 <div class="headerIconLinkSideBar">
                     <div class="" id="phoneCallSideBar"><a href="#"><i class="fa-solid fa-phone"
@@ -381,6 +396,9 @@
                 document.querySelector(".content").classList.remove("contentOnSideBar");
                 document.querySelector("body").classList.remove("bodyOnSideBar");
                 document.querySelector(".sideBar").classList.remove("sideBarOnSideBar");
+                document.querySelector(".navbar-toggler-icon").classList.remove("navbarIconNoneDisplay");
+                document.querySelector(".navbar-toogler-close").classList.add("navbarIconNoneDisplay");
+                document.querySelector(".navbar-brand").classList.remove("navbarIconNoneDisplay");
             }
         }
         changeClass("headerContainer");
@@ -400,8 +418,21 @@
             document.querySelector(".content").classList.toggle("contentOnSideBar");
             document.querySelector("body").classList.toggle("bodyOnSideBar");
             document.querySelector(".sideBar").classList.toggle("sideBarOnSideBar");
+            document.querySelector(".navbar-toggler-icon").classList.toggle("navbarIconNoneDisplay");
+            document.querySelector(".navbar-toogler-close").classList.toggle("navbarIconNoneDisplay");
+            document.querySelector(".navbar-brand").classList.toggle("navbarIconNoneDisplay");
+
+
         }
-        document.getElementById("onOffSideBarMenu").onclick = toogleClass;
+        document.getElementById("onOffSideBarMenu").onclick = toogleClass;     
+        window.onscroll = () => {
+            // console.log(window.scrollY)
+            if(window.scrollY >= 96){
+                document.querySelector("header .navbar").style.maxHeight = "54px";
+                document.querySelector("header .navbar").style.backgroundColor = "#FFFFFF";
+                // console.log(window.scrollY)
+            }
+        }
     </script>
 </body>
 

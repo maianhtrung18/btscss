@@ -1,39 +1,33 @@
-
-body{
+body {
     position: relative;
 }
-
-
-
-.content{
+.content {
     position: relative;
-    // margin-left: 300px;
-    margin-right: 0;
+    // margin-right: 0;
     transition: all 0.5s;
     width: 100vmax;
-    
 }
-.sideBar{
+.sideBar {
     transition: all 0.5s;
     width: 0px;
     height: 100%;
-    background-color: $borderColor;
     position: absolute;
     top: 0px;
     overflow: hidden;
     background-color: $primaryWhite;
+    box-shadow: 0px 0px 20px 0px rgba($color: #000000, $alpha: 0.1);
 }
-.sideBar{
-    .sideBarContent{
+.sideBar {
+    .sideBarContent {
         text-align: center;
-        .sideBarContentLogo{
+        .sideBarContentLogo {
             padding-bottom: 30px;
         }
     }
-    ul{
+    ul {
         padding: 0px;
-        li{
-            font-family: 'Montserrat', sans-serif;
+        li {
+            font-family: "Montserrat", sans-serif;
             font-size: 13px;
             font-weight: 400;
             line-height: 14px;
@@ -41,51 +35,87 @@ body{
             padding: 13px 26px;
         }
     }
-    .sideBarContentMenu{
-        .headerIconLinkSideBar{
-            #phoneCallSideBar{
+    .sideBarContentMenu {
+        .headerIconLinkSideBar {
+            #phoneCallSideBar {
                 @extend #phoneCall;
                 margin-bottom: 20px;
             }
-           
+
             margin-top: 50px;
         }
     }
-    
 }
-.sideBarIcon{
+.sideBarIcon {
     display: flex;
     @extend .headerIconLink;
     justify-content: center;
 }
+.navbarIconNoneDisplay {
+    display: none;
+}
+#About {
+    position: relative;
+}
+#About {
 
-@include responsive("smallest"){
-    .bodyOnSideBar{
+    i {
+        position: absolute;
+        top: 15px;
+        right: 30px;
+        cursor: pointer;
+    }
+    
+}
+
+.sideBarContentMenu{
+    ul{
+        a{
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s;
+            &:hover{
+                color: $primaryPink;
+            }
+        }
+    }
+    
+}
+.subMenuSideBar li:last-child{
+    padding-bottom: 0px;
+}
+.subMenuSideBar li:first-child{
+    margin-top: 13px;
+}
+    
+
+@include responsive("smallest") {
+    .bodyOnSideBar {
         overflow: hidden;
     }
-    .contentOnSideBar{
+    .contentOnSideBar {
         margin-left: 250px;
         width: 100vmax;
     }
-    .sideBarOnSideBar{
+    .sideBarOnSideBar {
         width: 250px;
     }
-    .sideBarContent{
+    .sideBarContent {
         width: 250px;
     }
 }
-
-@include responsive("large"){
-    .bodyOnSideBar{
+@include responsive("large") {
+    .bodyOnSideBar {
         overflow: hidden;
     }
-    .contentOnSideBar{
+    .contentOnSideBar {
         margin-left: 300px;
     }
-    .sideBarOnSideBar{
+    .sideBarOnSideBar {
         width: 300px;
     }
-    .sideBarContent{
+    .sideBarContent {
         width: 300px;
     }
 }

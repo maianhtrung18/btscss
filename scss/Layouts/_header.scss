@@ -1,70 +1,64 @@
-header{
-    position: absolute;
+header {
+    position: fixed;
     width: 100%;
     top: 0px;
     margin: auto;
     z-index: 100;
-    #headerContainer.container{
-
+    #headerContainer.container {
         justify-content: space-between;
     }
-    background:none;
-    
-    #navbarSupportedContent{
-        align-items: center;
+    background: none;
 
+    #navbarSupportedContent {
+        align-items: center;
     }
-    #headerContainer button{
+    #headerContainer button {
         border: none;
         color: $primaryPink;
     }
-    
 }
-.headerIconLink{
+.headerIconLink {
     display: flex;
     gap: 15px;
     justify-items: center;
-    a{
+    a {
         color: inherit;
         transition: all 0.2s;
-        &:hover{
+        &:hover {
             color: $primaryPink;
         }
     }
 }
 
-
-
-
-    #phoneCall{
-        min-width: 208px;
-        font-family: 'Montserrat', sans-serif;
-        a{
-            @include buttonPinkStyle($pd-3, $pd-2);
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: all 0.5s;
-            &:hover{
-                @include buttonPinkHover();
-            }
+#phoneCall {
+    min-width: 208px;
+    font-family: "Montserrat", sans-serif;
+    a {
+        @include buttonPinkStyle($pd-3, $pd-2);
+        font-weight: 500;
+        font-size: 0.9rem;
+        transition: all 0.5s;
+        &:hover {
+            @include buttonPinkHover();
         }
     }
-    
-  
+}
 
+#closeIcon {
+    line-height: 40px;
+}
 
-#navbarSupportedContent{
-    ul{
-        li{
+#navbarSupportedContent {
+    ul {
+        li {
             position: relative;
-            a.nav-link{
+            a.nav-link {
                 transition: all 0.2s;
-                &:hover{
+                &:hover {
                     color: $primaryPink;
-
                 }
-                &::after{
-                    content: '';
+                &::after {
+                    content: "";
                     height: 8px;
                     width: 8px;
                     background-color: $primaryPink;
@@ -77,30 +71,28 @@ header{
                     z-index: 8;
                 }
             }
-            .nav-link.active{
-                &::after{
-                    transform: translateX(-50%) scale(1);          
+            .nav-link.active {
+                &::after {
+                    transform: translateX(-50%) scale(1);
                 }
             }
         }
     }
-    .nav-item{
+    .nav-item {
         position: relative;
         transition: all 0.2s;
-        &:hover{
-            .subMenu{
+        &:hover {
+            .subMenu {
                 visibility: visible;
                 transform: scaleX(1) scaleY(1);
                 opacity: 1;
             }
-            a::after{
+            a::after {
                 transform: translateX(-50%) scale(1.5);
             }
-            
         }
 
-        
-        .subMenu{
+        .subMenu {
             background-color: $primaryWhite;
             position: absolute;
             flex-direction: column;
@@ -109,81 +101,81 @@ header{
             padding-left: 5px;
             box-shadow: 0 0 10px 0 $shadowColor;
             display: flex;
-            transition: all .2s;
+            transition: all 0.2s;
             padding-left: $pd-2;
             padding-right: $pd-2;
             opacity: 0;
             visibility: hidden;
             transform: scaleX(0.9) scaleY(0.9);
-            a{
+            a {
                 text-decoration: none;
-                font-family: 'Montserrat', sans-serif;
+                font-family: "Montserrat", sans-serif;
                 font-weight: 600;
                 color: inherit;
                 transition: all 0.2s;
-                
             }
-            li{
+            li {
                 line-height: 50px;
                 border-bottom: 1px solid $borderColor;
-                &:hover{
-                    a{
+                &:hover {
+                    a {
                         color: $primaryPink;
                     }
                 }
-                &:last-child{
+                &:last-child {
                     border: none;
                 }
             }
         }
-        
-        
     }
-
-   
 }
 
-.menuHeader{
+.menuHeader {
     gap: 30px;
     margin-right: $mg-2;
-    li{
+    li {
         font-weight: 600;
         line-height: 80px;
         font-size: 13px;
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
     }
-    
 }
-@include responsive("smallest"){
-    #navbarSupportedContent{
+@include responsive("smallest") {
+    #navbarSupportedContent {
         display: none;
     }
-    #headerContainer{
-        button{
+    #headerContainer {
+        button {
             display: inline-block;
-        }   
-        img{
+        }
+        img {
             width: 48px;
             height: 48px;
-        }   
+        }
+    }
+    header {
+        background-color: $primaryWhite;
+        height: 48px;
+        .navbar {
+            padding: 0px;
+        }
     }
 }
-@include responsive("extra-large"){
-    #navbarSupportedContent{
+@include responsive("extra-large") {
+    #navbarSupportedContent {
         display: flex;
     }
-    #headerContainer{
-        button{
+    #headerContainer {
+        button {
             display: none;
         }
-       
-        img{
+
+        img {
             width: 80px;
             height: 80px;
         }
-        
+    }
+    header{
+        background-color: transparent;
     }
 }
-
-
-

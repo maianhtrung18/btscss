@@ -1,5 +1,5 @@
 header {
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 0px;
   margin: auto;
@@ -50,6 +50,10 @@ header #headerContainer button {
   border: 1px solid #b61984;
   color: #b61984;
   box-shadow: inset 0px 0px 0px 0px #b61984;
+}
+
+#closeIcon {
+  line-height: 40px;
 }
 
 #navbarSupportedContent ul li {
@@ -145,6 +149,13 @@ header #headerContainer button {
     width: 48px;
     height: 48px;
   }
+  header {
+    background-color: #ffffff;
+    height: 48px;
+  }
+  header .navbar {
+    padding: 0px;
+  }
 }
 @media screen and (min-width: 1200px) {
   #navbarSupportedContent {
@@ -156,6 +167,9 @@ header #headerContainer button {
   #headerContainer img {
     width: 80px;
     height: 80px;
+  }
+  header {
+    background-color: transparent;
   }
 }
 .carousel_container {
@@ -532,7 +546,6 @@ body {
 
 .content {
   position: relative;
-  margin-right: 0;
   transition: all 0.5s;
   width: 100vmax;
 }
@@ -541,11 +554,11 @@ body {
   transition: all 0.5s;
   width: 0px;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 0px;
   overflow: hidden;
   background-color: #ffffff;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 .sideBar .sideBarContent {
@@ -575,6 +588,39 @@ body {
 .sideBarIcon {
   display: flex;
   justify-content: center;
+}
+
+.navbarIconNoneDisplay {
+  display: none;
+}
+
+#About {
+  position: relative;
+}
+
+#About i {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.sideBarContentMenu ul a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
+}
+.sideBarContentMenu ul a:hover {
+  color: #b61984;
+}
+
+.subMenuSideBar li:last-child {
+  padding-bottom: 0px;
+}
+
+.subMenuSideBar li:first-child {
+  margin-top: 13px;
 }
 
 @media screen and (min-width: 1px) {

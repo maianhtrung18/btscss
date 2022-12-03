@@ -39,13 +39,16 @@
                     font-family: 'Montserrat', sans-serif;
                     font-size: 12px;
                     font-weight: 600;
-                    background-color: $primaryWhite;
                     color: $secondaryPink;
                     border: 1px solid $primaryWhite;
                     transition: all 0.5s;
+                    box-shadow: inset 0px 0px 0px 20px $primaryWhite;
+                    background-color: $secondaryPink;
                     &:hover{
-                        background-color: $primaryPink;
                         color: $primaryWhite;
+                        box-shadow: inset 0px 0px 0px 0px $primaryWhite;
+                        // background-color: $secondaryPink;
+
                     }
                     
                 }
@@ -71,6 +74,10 @@
                 #footerContainerContentCardIcon{
                     display: flex;
                     gap: 15px;
+                    a{
+                        text-decoration: none;
+                        color: $primaryWhite;
+                    }
                 }
                 .footerContainerContentCardContent{
                     // padding: 12px 0px;

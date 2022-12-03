@@ -17,38 +17,39 @@ header #headerContainer button {
   color: #b61984;
 }
 
-.headerIconLink {
+.headerIconLink, .sideBarIcon {
   display: flex;
   gap: 15px;
   justify-items: center;
 }
+.headerIconLink a, .sideBarIcon a {
+  color: inherit;
+  transition: all 0.2s;
+}
+.headerIconLink a:hover, .sideBarIcon a:hover {
+  color: #b61984;
+}
 
-.headerIconLink #phoneCall {
+#phoneCall, .sideBar .sideBarContentMenu .headerIconLinkSideBar #phoneCallSideBar {
   min-width: 208px;
   font-family: "Montserrat", sans-serif;
 }
-.headerIconLink #phoneCall a {
-  background-color: #b61984;
+#phoneCall a, .sideBar .sideBarContentMenu .headerIconLinkSideBar #phoneCallSideBar a {
+  background-color: #ffffff;
+  box-shadow: inset 0px 0px 0px 30px #b61984;
   border: 1px solid #b61984;
   border-radius: 50px;
-  color: #fff;
+  color: #ffffff;
   padding: 13px 25px;
   text-decoration: none;
   font-weight: 500;
   font-size: 0.9rem;
   transition: all 0.5s;
 }
-.headerIconLink #phoneCall a:hover {
-  background-color: transparent;
+#phoneCall a:hover, .sideBar .sideBarContentMenu .headerIconLinkSideBar #phoneCallSideBar a:hover {
   border: 1px solid #b61984;
   color: #b61984;
-}
-.headerIconLink a {
-  color: inherit;
-  transition: all 0.2s;
-}
-.headerIconLink a:hover {
-  color: #b61984;
+  box-shadow: inset 0px 0px 0px 0px #b61984;
 }
 
 #navbarSupportedContent ul li {
@@ -71,6 +72,7 @@ header #headerContainer button {
   border-radius: 50%;
   transition: all 0.5s;
   transform: translateX(-50%) scale(0);
+  z-index: 8;
 }
 #navbarSupportedContent ul li .nav-link.active::after {
   transform: translateX(-50%) scale(1);
@@ -88,6 +90,7 @@ header #headerContainer button {
   transform: translateX(-50%) scale(1.5);
 }
 #navbarSupportedContent .nav-item .subMenu {
+  background-color: #ffffff;
   position: absolute;
   flex-direction: column;
   list-style: none;
@@ -253,7 +256,7 @@ header #headerContainer button {
   transition: all 0.5s;
 }
 .card .card_Container .card_ContainerCard .card_ContainerCardContent {
-  background-color: #fff;
+  background-color: #ffffff;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   text-align: center;
@@ -312,16 +315,17 @@ header #headerContainer button {
   padding-top: 30px;
   margin-left: auto;
   border-radius: 20px;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 .formInput .formInputContainer .formInputContainerRight .formInputContainerRightContent .row {
   padding: 0px;
 }
 .formInput .formInputContainer .formInputContainerRight .formInputContainerRightContent button {
-  background-color: #b61984;
+  background-color: #ffffff;
+  box-shadow: inset 0px 0px 0px 30px #b61984;
   border: 1px solid #b61984;
   border-radius: 50px;
-  color: #fff;
+  color: #ffffff;
   padding: 13px 50px;
   text-decoration: none;
   margin-top: 40px;
@@ -332,9 +336,9 @@ header #headerContainer button {
   transition: all 0.5s;
 }
 .formInput .formInputContainer .formInputContainerRight .formInputContainerRightContent button:hover {
-  background-color: transparent;
   border: 1px solid #b61984;
   color: #b61984;
+  box-shadow: inset 0px 0px 0px 0px #b61984;
 }
 .formInput .formInputContainer .formInputContainerRight .formInputContainerRightContent h1 {
   font-family: "Montserrat", sans-serif;
@@ -426,7 +430,7 @@ header #headerContainer button {
   animation-delay: 800ms;
 }
 .footer .footerContainer .footerContainerContent .footerContainerContentCard {
-  color: #fff;
+  color: #ffffff;
   padding-top: 30px;
 }
 .footer .footerContainer .footerContainerContent .footerContainerContentCard ul {
@@ -437,24 +441,26 @@ header #headerContainer button {
   padding: 10px 0px;
 }
 .footer .footerContainer .footerContainerContent .footerContainerContentCard button {
-  background-color: #b61984;
+  background-color: #ffffff;
+  box-shadow: inset 0px 0px 0px 30px #b61984;
   border: 1px solid #b61984;
   border-radius: 50px;
-  color: #fff;
+  color: #ffffff;
   padding: 10px 0px;
   text-decoration: none;
   width: 100%;
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
   font-weight: 600;
-  background-color: #fff;
   color: #aa017e;
-  border: 1px solid #fff;
+  border: 1px solid #ffffff;
   transition: all 0.5s;
+  box-shadow: inset 0px 0px 0px 20px #ffffff;
+  background-color: #aa017e;
 }
 .footer .footerContainer .footerContainerContent .footerContainerContentCard button:hover {
-  background-color: #b61984;
-  color: #fff;
+  color: #ffffff;
+  box-shadow: inset 0px 0px 0px 0px #ffffff;
 }
 .footer .footerContainer .footerContainerContent .footerContainerContentCard .footerInput {
   padding: 5px 15px;
@@ -479,29 +485,33 @@ header #headerContainer button {
 .footer .footerContainer .footerContainerContent .footerContainerContentCard .footerInput input {
   text-align: center;
   background-color: transparent;
-  color: #fff;
+  color: #ffffff;
   font-size: 15px;
   font-weight: 300;
 }
 .footer .footerContainer .footerContainerContent .footerContainerContentCard .footerInput input::placeholder {
-  color: #fff;
+  color: #ffffff;
 }
 .footer .footerContainer .footerContainerContent .footerContainerContentCard #footerContainerContentCardIcon {
   display: flex;
   gap: 15px;
+}
+.footer .footerContainer .footerContainerContent .footerContainerContentCard #footerContainerContentCardIcon a {
+  text-decoration: none;
+  color: #ffffff;
 }
 .footer .footerContainer .footerContainerContent .footerContainerContentCard .footerContainerContentCardContent i {
   width: 30px;
 }
 .footer .footerContainer .footerContainerContent .footerContainerContentCard .footerContainerContentCardContent span {
   font-size: 14px;
-  color: #fff;
+  color: #ffffff;
   padding-bottom: 11px;
 }
 .footer .footerContainer .footerContainerContent .footerContainerContentCard .footerContainerContentCardTitle {
   font-size: 23px;
   font-family: "Montserrat", sans-serif;
-  color: #fff;
+  color: #ffffff;
   font-weight: 700;
   padding-bottom: 20px;
 }
@@ -514,5 +524,85 @@ header #headerContainer button {
 @media screen and (min-width: 992px) {
   .footerContainerContent {
     padding: 0px 40px;
+  }
+}
+body {
+  position: relative;
+}
+
+.content {
+  position: relative;
+  margin-right: 0;
+  transition: all 0.5s;
+  width: 100vmax;
+}
+
+.sideBar {
+  transition: all 0.5s;
+  width: 0px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.sideBar .sideBarContent {
+  text-align: center;
+}
+.sideBar .sideBarContent .sideBarContentLogo {
+  padding-bottom: 30px;
+}
+.sideBar ul {
+  padding: 0px;
+}
+.sideBar ul li {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 14px;
+  list-style: none;
+  padding: 13px 26px;
+}
+.sideBar .sideBarContentMenu .headerIconLinkSideBar {
+  margin-top: 50px;
+}
+.sideBar .sideBarContentMenu .headerIconLinkSideBar #phoneCallSideBar {
+  margin-bottom: 20px;
+}
+
+.sideBarIcon {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 1px) {
+  .bodyOnSideBar {
+    overflow: hidden;
+  }
+  .contentOnSideBar {
+    margin-left: 300px;
+    width: 100vmax;
+  }
+  .sideBarOnSideBar {
+    width: 300px;
+  }
+  .sideBarContent {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .bodyOnSideBar {
+    overflow: hidden;
+  }
+  .contentOnSideBar {
+    margin-left: 300px;
+  }
+  .sideBarOnSideBar {
+    width: 300px;
+  }
+  .sideBarContent {
+    width: 300px;
   }
 }/*# sourceMappingURL=main.css.map */

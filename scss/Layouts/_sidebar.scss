@@ -1,0 +1,95 @@
+
+body{
+    position: relative;
+}
+
+
+
+.content{
+    position: relative;
+    // margin-left: 300px;
+    margin-right: 0;
+    transition: all 0.5s;
+    width: 100vmax;
+    
+}
+.sideBar{
+    transition: all 0.5s;
+    width: 0px;
+    height: 100%;
+    background-color: $borderColor;
+    position: absolute;
+    top: 0px;
+    overflow: hidden;
+    background-color: $primaryWhite;
+}
+.sideBar{
+    .sideBarContent{
+        text-align: center;
+        .sideBarContentLogo{
+            padding-bottom: 30px;
+        }
+    }
+    ul{
+        padding: 0px;
+        li{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 14px;
+            list-style: none;
+            padding: 13px 26px;
+        }
+    }
+    .sideBarContentMenu{
+        .headerIconLinkSideBar{
+            #phoneCallSideBar{
+                @extend #phoneCall;
+                margin-bottom: 20px;
+            }
+           
+            margin-top: 50px;
+        }
+    }
+    
+}
+.sideBarIcon{
+    display: flex;
+    @extend .headerIconLink;
+    justify-content: center;
+}
+
+@include responsive("smallest"){
+    .bodyOnSideBar{
+        overflow: hidden;
+    }
+    .contentOnSideBar{
+        margin-left: 300px;
+        width: 100vmax;
+        // width: 100%;
+    }
+    .sideBarOnSideBar{
+        width: 300px;
+    }
+    .sideBarContent{
+        width: 300px;
+        // overflow: ;
+    }
+}
+
+@include responsive("large"){
+    .bodyOnSideBar{
+        overflow: hidden;
+    }
+    .contentOnSideBar{
+        margin-left: 300px;
+        // width: 100%;
+    }
+    .sideBarOnSideBar{
+        width: 300px;
+    }
+    .sideBarContent{
+        width: 300px;
+        // overflow: ;
+    }
+}

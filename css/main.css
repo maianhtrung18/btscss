@@ -56,16 +56,13 @@ header #headerContainer button {
   line-height: 40px;
 }
 
-#navbarSupportedContent ul li {
-  position: relative;
-}
-#navbarSupportedContent ul li a.nav-link {
+a.nav-link {
   transition: all 0.2s;
 }
-#navbarSupportedContent ul li a.nav-link:hover {
+a.nav-link:hover {
   color: #b61984;
 }
-#navbarSupportedContent ul li a.nav-link::after {
+a.nav-link::after {
   content: "";
   height: 8px;
   width: 8px;
@@ -78,8 +75,13 @@ header #headerContainer button {
   transform: translateX(-50%) scale(0);
   z-index: 8;
 }
-#navbarSupportedContent ul li .nav-link.active::after {
+
+.nav-link.active::after {
   transform: translateX(-50%) scale(1);
+}
+
+#navbarSupportedContent ul li {
+  position: relative;
 }
 #navbarSupportedContent .nav-item {
   position: relative;
@@ -138,6 +140,10 @@ header #headerContainer button {
   font-family: "Montserrat", sans-serif;
 }
 
+header .navbar {
+  transition: all 0.5s;
+}
+
 @media screen and (min-width: 1px) {
   #navbarSupportedContent {
     display: none;
@@ -151,7 +157,7 @@ header #headerContainer button {
   }
   header {
     background-color: #ffffff;
-    height: 48px;
+    transition: all 0.5s;
   }
   header .navbar {
     padding: 0px;
@@ -162,6 +168,7 @@ header #headerContainer button {
   .smallHeader {
     height: 48px;
     background-color: #ffffff;
+    transition: all 0.5s;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -182,8 +189,11 @@ header #headerContainer button {
     display: none;
   }
   .smallHeader {
-    height: 54px;
     background-color: #ffffff;
+    transition: all 0.5s;
+  }
+  a.navLinkSmall::after {
+    bottom: 15px;
   }
 }
 .carousel_container {

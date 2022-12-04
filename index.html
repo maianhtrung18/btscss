@@ -412,6 +412,11 @@
             changeClass("card_Container");
             changeClass("formInputContainer");
             changeClass("footerContainer");
+            if(window.innerWidth < 1200){
+                document.querySelector("header .navbar").style.height = "48px";
+            }else{
+                document.querySelector("header .navbar").style.height = "96px";
+            }
         })
 
         let toogleClass = () => {
@@ -426,13 +431,27 @@
         }
         document.getElementById("onOffSideBarMenu").onclick = toogleClass;     
         window.onscroll = () => {
-            if(window.scrollY >= 96){
+            if(window.scrollY >= 96 & window.innerWidth >= 1200){
                 document.querySelector("header .navbar").classList.add("smallHeader");
                 document.querySelector(".navbar-brand").classList.add("logoNoneDisplay");
+                let nablinkElement = document.querySelectorAll(".nav-link");
+                for (const element of nablinkElement){
+                    element.classList.add("navLinkSmall");
+                }
+                document.querySelector("header .navbar").style.height = "54px";
             }
-            else if(window.scrollY < 96){
+            else if(window.scrollY < 96 & window.innerWidth >= 1200){
                 document.querySelector("header .navbar").classList.remove("smallHeader");
                 document.querySelector(".navbar-brand").classList.remove("logoNoneDisplay");
+                document.querySelector("header .navbar").style.height = "96px";
+                document.querySelector(".nav-link").classList.remove("navLinkSmall");
+                let nablinkElement = document.querySelectorAll(".nav-link");
+                for (const element of nablinkElement){
+                    element.classList.remove("navLinkSmall");
+                }
+            }
+            else if(window.innerWidth < 1200){
+                document.querySelector("header .navbar").style.height = "48px";
             }
  
         }

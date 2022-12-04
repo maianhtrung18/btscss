@@ -47,35 +47,35 @@ header {
 #closeIcon {
     line-height: 40px;
 }
-
+a.nav-link {
+    transition: all 0.2s;
+    &:hover {
+        color: $primaryPink;
+    }
+    &::after {
+        content: "";
+        height: 8px;
+        width: 8px;
+        background-color: $primaryPink;
+        position: absolute;
+        left: 50%;
+        bottom: 0px;
+        border-radius: 50%;
+        transition: all 0.5s;
+        transform: translateX(-50%) scale(0);
+        z-index: 8;
+    }
+}
+.nav-link.active {
+    &::after {
+        transform: translateX(-50%) scale(1);
+    }
+}
 #navbarSupportedContent {
     ul {
         li {
             position: relative;
-            a.nav-link {
-                transition: all 0.2s;
-                &:hover {
-                    color: $primaryPink;
-                }
-                &::after {
-                    content: "";
-                    height: 8px;
-                    width: 8px;
-                    background-color: $primaryPink;
-                    position: absolute;
-                    left: 50%;
-                    bottom: 0px;
-                    border-radius: 50%;
-                    transition: all 0.5s;
-                    transform: translateX(-50%) scale(0);
-                    z-index: 8;
-                }
-            }
-            .nav-link.active {
-                &::after {
-                    transform: translateX(-50%) scale(1);
-                }
-            }
+            
         }
     }
     .nav-item {
@@ -140,6 +140,11 @@ header {
         font-family: "Montserrat", sans-serif;
     }
 }
+header .navbar{
+    transition: all 0.5s;
+}
+
+
 @include responsive("smallest") {
     #navbarSupportedContent {
         display: none;
@@ -155,9 +160,10 @@ header {
     }
     header {
         background-color: $primaryWhite;
-        height: 48px;
+        transition: all 0.5s;
         .navbar {
             padding: 0px;
+            // transition: all 0.5s;
         }
     }
     .logoNoneDisplay{
@@ -166,6 +172,8 @@ header {
     .smallHeader{
         height: 48px;
         background-color: $primaryWhite;
+        transition: all .5s;
+        
     }
 }
 
@@ -190,7 +198,14 @@ header {
         display: none;
     }
     .smallHeader{
-        height: 54px;
+        // height: 54px;
         background-color: $primaryWhite;
+        transition: all .5s;
+        
+    }
+    a.navLinkSmall{
+        &::after{
+            bottom: 15px;
+        }
     }
 }
